@@ -5,12 +5,9 @@
 ;; This function was taken from http://truongtx.me/2013/01/07/emacs-package-manager/
 ;; All credit goes to him. I've also based the directory layout of my .emacs.d based
 ;; off of what I have learned from his at https://github.com/tmtxt/.emacs.d
-;;; Emacs is not a package manager, and here we load its package manager!
 (require 'package)
 (dolist (source '(("marmalade" . "http://marmalade-repo.org/packages/")
                   ("elpa" . "http://tromey.com/elpa/")
-                  ;; TODO: Maybe, use this after emacs24 is released
-                  ;; (development versions of packages)
                   ("melpa" . "http://melpa.milkbox.net/packages/")
                   ))
   (add-to-list 'package-archives source t))
@@ -31,6 +28,7 @@
 (require 'zro-ecb)
 (require 'zro-git)
 (require 'zro-auto-complete)
+(require 'zro-yasnippet)
 
 ;; Custom variable file
 (setq custom-file "~/.emacs.d/custom.el")
