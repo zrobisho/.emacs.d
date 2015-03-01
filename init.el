@@ -1,3 +1,11 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; Dont be silly, to get newest emacs do this...
+;; > brew install emacs --cocoa --srgb
+;; > brew linkapps Emacs
+;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 
 ;; Load my prefs
 (add-to-list 'load-path "~/.emacs.d/config/")
@@ -18,6 +26,9 @@
 (defvar zro/packages
   '(auto-complete
     yasnippet
+    git
+    cider
+    paredit
     ecb))
 (dolist (p zro/packages)
   (when (not (package-installed-p p))
@@ -29,13 +40,10 @@
 (require 'zro-git)
 (require 'zro-auto-complete)
 (require 'zro-yasnippet)
+(require 'zro-cider)
+(require 'zro-clojure)
+(require 'zro-javascript)
 
 ;; Custom variable file
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
-
-;; Refesh open webpage on save
-;;(defun refresh-chrome-on-save ()
-;;    (shell-command-to-string "chrome-cli reload"))
-;; ... and call it on each save
-;;(add-hook 'after-save-hook 'refresh-chrome-on-save)
