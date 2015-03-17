@@ -27,9 +27,11 @@
   '(auto-complete
     yasnippet
     git
+    git-blame
     cider
     paredit
-    ecb))
+    ecb
+    bats-mode))
 (dolist (p zro/packages)
   (when (not (package-installed-p p))
     (package-install p)))
@@ -43,6 +45,7 @@
 (require 'zro-cider)
 (require 'zro-clojure)
 (require 'zro-javascript)
+(require 'zro-bats)
 
 ;; Custom variable file
 (setq custom-file "~/.emacs.d/custom.el")
