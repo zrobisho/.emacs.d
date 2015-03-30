@@ -28,6 +28,7 @@
     yasnippet
     git
     git-blame
+    js2-mode
     cider
     paredit
     ecb
