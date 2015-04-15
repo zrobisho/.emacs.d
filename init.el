@@ -26,8 +26,7 @@
 (defvar zro/packages
   '(auto-complete
     yasnippet
-    git
-    git-blame
+    magit
     js2-mode
     cider
     paredit
@@ -40,7 +39,7 @@
 ;; Personal requires
 (require 'zro-defaults)
 (require 'zro-ecb)
-(require 'zro-git)
+(require 'zro-magit)
 (require 'zro-auto-complete)
 (require 'zro-yasnippet)
 (require 'zro-cider)
