@@ -8,6 +8,7 @@
 
 
 ;; Load my prefs
+(add-to-list 'load-path "~/.emacs.d/lisp/")
 (add-to-list 'load-path "~/.emacs.d/config/")
 
 ;; This function was taken from http://truongtx.me/2013/01/07/emacs-package-manager/
@@ -28,10 +29,12 @@
     yasnippet
     magit
     js2-mode
+    company
     cider
     paredit
     ecb
-    bats-mode))
+    bats-mode
+    ensime))
 (dolist (p zro/packages)
   (when (not (package-installed-p p))
     (package-install p)))
@@ -46,6 +49,8 @@
 (require 'zro-clojure)
 (require 'zro-javascript)
 (require 'zro-bats)
+(require 'zro-scala)
+(require 'zro-nodejs-debug)
 
 ;; Custom variable file
 (setq custom-file "~/.emacs.d/custom.el")
