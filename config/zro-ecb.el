@@ -1,7 +1,7 @@
 ;; ECB stuff
 
 (require 'ecb)
-(require 'ecb-autoloads)
+;;(require 'ecb-autoloads)
 
 (setq ecb-layout-name "left3")
 (setq ecb-show-sources-in-directories-buffer 'always)

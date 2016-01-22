@@ -19,6 +19,7 @@
   '(progn
      (setq-default js2-basic-offset 4)
      (setq-default js2-include-node-externs t)
+     (setq-default js2-strict-missing-semi-warngin nil)
      (setq js2-skip-preprocessor-directives t)))
 
 (provide 'zro-javascript)
